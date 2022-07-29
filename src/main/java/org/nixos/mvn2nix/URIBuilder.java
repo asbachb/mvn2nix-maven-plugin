@@ -31,7 +31,7 @@ public final class URIBuilder {
 	private URIBuilder() {
 	}
 	
-	public static URI build(String base, URI fileLoc) throws URISyntaxException {
-		return new URI(base + "/" + fileLoc);
+	public static URI build(String base, URI baseSuffix) throws URISyntaxException {
+		return new URI(base + "/" + baseSuffix).normalize();
 	}
 }
